@@ -1,16 +1,18 @@
 let listaDeNumerosSorteados = [];
-let numeraMaximo = 10;
+let numeraMaximo = 50;
 let numeroSecreto = gerarNumRandom();
 let tentativas = 1;
 
 function exibirTextoTela(tag, texto) {
+    //var textoFinal;
+    //textoFinal = `${texto} ${numeraMaximo}`;
     let titulo = document.querySelector(tag);
     titulo.innerHTML = texto;
 }
 
 function exibirmensagemInicial(){
 exibirTextoTela('h1', 'O jogo do número secreto');
-exibirTextoTela('p', 'Escolha um número entre 1 e 10');
+exibirTextoTela('p', `Escolha um número entre 1 e ${numeraMaximo}`);
 }
 
 exibirmensagemInicial();
